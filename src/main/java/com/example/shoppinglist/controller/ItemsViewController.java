@@ -1,6 +1,5 @@
 package com.example.shoppinglist.controller;
 
-import com.example.shoppinglist.model.Item;
 import com.example.shoppinglist.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +16,7 @@ public class ItemsViewController {
     public String list(Model model) {
         // TODO: 09.11.2021
         model.addAttribute("appName", "Список покупок");
-        model.addAttribute("item", itemService.listAllItems());
+        model.addAttribute("items", itemService.listAllItems());
         return "shopping-list";
     }
 }

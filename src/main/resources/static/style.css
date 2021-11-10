@@ -1,11 +1,44 @@
+.caption {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.controls {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.item-info {
+
+    margin-bottom: 10px;
+}
+
+.description-text {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.buy-info{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
 .checkmark {
     width: 30px;
     height: 30px;
+    margin-left: 15px;
+}
+
+.delete-block {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 30px;
 }
 
 .delete-btn {
     width: 30px;
-    height: 50px;
+    height: 30px;
     border: 0;
     outline: 0;
 }
@@ -13,4 +46,8 @@
 .delete-img {
     height: 25px;
     width: 25px;
+}
+
+.new-item {
+    margin-left: 30px;
 }
