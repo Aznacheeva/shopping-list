@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список покупок</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1 th:text="${appName}" style="color: green">Список покупок</h1>
+    <hr/>
+    <div th:each="item : ${items}">
+        <div class="row-article">
+            <div class="col-md-11 description">
+                <p class="description-text" th:text="${item.getText()}">Text</p>
+            </div>
+            <div class="buy-info">
+                <div class="item-info">Куплено</div>
+                <div><input
+                        th:attr="data-item-id=${item.getId()}"
+                        th:checked="${item.getDone()}"
+                        type="checkbox"
+                        class="checkmark"/></div>
+            </div>
+            <div>
+                <button th:attr="data-delete-id=${item.getId()}"
+                        class="delete-btn">
+                    <img class="delete-img"
+                        src="https://www.pngall.com/wp-content/uploads/5/Delete-Red-X-Button-PNG-Images.png"
+                        alt="delete">
+                </button>
+            </div>
+            <div class="col-md-12">
+                <hr/>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <br/>
+    <div>
+        <form method="get" action="/new">
+            <button type="submit" class="btn-light">Добавить покупку</button>
+        </form>
+    </div>
+</body>
+</html>
