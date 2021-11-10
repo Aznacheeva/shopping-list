@@ -37,7 +37,7 @@ public class Item {
         return isDone;
     }
 
-    public void setDone(Boolean done) {
-        isDone = done;
+    public void setDone() {
+        isDone = !isDone;
     }
 }

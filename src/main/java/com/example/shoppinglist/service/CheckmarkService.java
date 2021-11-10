@@ -10,9 +10,9 @@ public class CheckmarkService {
     @Autowired
     ItemRepository itemRepository;
 
-    public Boolean isDone(Long itemId) { //ПОД ВОПРОСОМ todo
+    public Boolean isDone(Long itemId) {
         Item item = itemRepository.findById(itemId).get();
-        item.setDone(true);
+        item.setDone();
         itemRepository.save(item);
         return item.getDone();
     }

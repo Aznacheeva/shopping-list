@@ -15,7 +15,7 @@ public class CheckmarkController {
 
     @ResponseBody
     @RequestMapping(path = "/item-bought/{id}", method = RequestMethod.POST)
-    public void checkmark(@PathVariable("id") Long id) {
-        checkmarkService.isDone(id);
+    public boolean checkmark(@PathVariable("id") Long id) {
+        return checkmarkService.isDone(id);
     }
 }
