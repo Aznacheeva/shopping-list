@@ -14,7 +14,6 @@ public class ItemsViewController {
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String list(Model model) {
-        // TODO: 09.11.2021
         model.addAttribute("appName", "Список покупок");
         model.addAttribute("items", itemService.listAllItems());
         return "shopping-list";
