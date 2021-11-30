@@ -14,9 +14,10 @@ public class ItemService {
         return itemRepository.findAll();
     }
 
-    public void create(String text) {
+    public Item create(String text) {
         Item item = new Item(null, text);
         itemRepository.save(item);
+        return item;
     }
 
     public void delete(Long id) {
