@@ -25,9 +25,6 @@ class ShoppingListApplicationTests {
 	@Autowired
 	private MockMvc mockMvc;
 
-	@Autowired
-	private ItemsCreateController itemsCreateController;
-
 	@Test
 	public void loadingHeaderTest() throws Exception {
 		this.mockMvc.perform(get("/"))
@@ -42,6 +39,6 @@ class ShoppingListApplicationTests {
 	public void countItemsTest() throws Exception {
 		this.mockMvc.perform(get("/"))
 				.andDo(print())
-				.andExpect(xpath("/html/body/div[1]/div").nodeCount(1));
+				.andExpect(xpath("//div[@class=\"row-article\"]").nodeCount(3));
 	}
 }
